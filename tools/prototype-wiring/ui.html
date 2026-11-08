@@ -1,0 +1,21 @@
+<!doctype html><html lang="ru"><meta charset="utf-8"><style>
+body{font:13px/1.5 Inter,Arial,sans-serif;margin:20px;color:var(--figma-color-text,#222);background:var(--figma-color-bg,#fff)}h1{font-size:20px;margin:0 0 8px}p{margin:8px 0}.actions{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}button{font:inherit;padding:9px 12px;border:1px solid #999;border-radius:5px;cursor:pointer}button.primary{background:#222;color:white}button:disabled{opacity:.45;cursor:default}pre{font:11px/1.5 monospace;white-space:pre-wrap;overflow-wrap:anywhere;max-height:350px;overflow:auto;background:var(--figma-color-bg-secondary,#f2f2f2);padding:12px;border:1px solid #aaa}.muted{font-size:12px;opacity:.8}label{display:block;margin:12px 0}
+</style><h1>Mini Issue Tracker · Prototype Wiring</h1>
+<p>50 переходов из вашей таблицы. Меняются только prototype reactions и flow starts. Без сети, перерисовки и удаления узлов.</p>
+<p class="muted">Работает в исходном файле с исходными ID. Сначала сохраните локальную копию .fig / версию BEFORE_WIRING. Повторный запуск не дублирует готовые связи.</p>
+<label><input type="checkbox" id="ack"> Копия до запуска сохранена; понимаю, что это симуляция по таблице.</label>
+<div class="actions"><button id="check">1. Проверить узлы</button><button class="primary" id="apply" disabled>2. Записать 50 переходов</button><button id="restore">Восстановить исходные связи</button><button id="download" disabled>Скачать отчёт</button></div>
+<div id="status" role="status">Начните с проверки. Она ничего не меняет.</div><pre id="report">Проверка ещё не запускалась.</pre>
+<p class="muted">Conditions в таблице — описания подготовленных состояний. Формы создания используют Navigate, как задано в JSON. После записи откройте Present и проверьте маршруты вручную.</p>
+<script>
+let report=null,busy=false,checked=false;
+const $=id=>document.getElementById(id);
+function refresh(){for(const id of ['check','restore'])$(id).disabled=busy;$('apply').disabled=busy||!checked||!$('ack').checked;$('download').disabled=busy||!report;}
+function send(type){parent.postMessage({pluginMessage:{type}},'*');}
+$('check').onclick=()=>{checked=false;refresh();send('check');};
+$('apply').onclick=()=>{checked=false;refresh();send('apply');};
+$('restore').onclick=()=>{if(confirm('Восстановить сохранённые до первого запуска связи и flow starts? Макеты останутся прежними.')){checked=false;send('restore');}};
+$('ack').onchange=refresh;
+$('download').onclick=()=>{const url=URL.createObjectURL(new Blob([JSON.stringify(report,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='MIT_wiring_report.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
+onmessage=event=>{const msg=event.data.pluginMessage;if(!msg)return;if(msg.type==='busy')busy=msg.busy;if(msg.type==='report'){report=msg.report;checked=report.phase==='check'&&report.ok;$('report').textContent=JSON.stringify(report,null,2);$('status').textContent=report.message||(report.ok?'Проверка успешна: '+report.total+' строк; новых '+report.ready+', уже готовы '+report.alreadyWired:'Проверка обнаружила ошибки. Ничего не записано.');}refresh();};
+</script></html>

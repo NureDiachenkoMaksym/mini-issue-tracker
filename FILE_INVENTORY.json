@@ -1,0 +1,176 @@
+{
+  "created": "2026-11-08",
+  "note": "Original source and final .fig bytes preserved; inventory excludes itself. Author and submission links updated.",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 9086,
+      "sha256": "1c8d11249188be95b00d6e538fd05c14091301e29e98b10f8be0ad2741eb4360"
+    },
+    {
+      "path": "docs/01_Input_Pack_v0.1.md",
+      "bytes": 23317,
+      "sha256": "795d288520e85f990ba0bb5dae3f67e5db3f8bcdbf545e540df7ce5ff9744d31"
+    },
+    {
+      "path": "docs/02_Screen_Map_v1.0.md",
+      "bytes": 8691,
+      "sha256": "ca00be512191287822cd76c2aaff448a8fc5ed7ef05582c8e9ab82b88fa5b989"
+    },
+    {
+      "path": "docs/03_Screen_Contracts_v1.0.md",
+      "bytes": 9686,
+      "sha256": "712043f2fbbd2fc884cec5e917cfd175bf06bfbb61294ac7a0e322eed29bd000"
+    },
+    {
+      "path": "docs/03_Traceability_and_Tests_v1.0.md",
+      "bytes": 12241,
+      "sha256": "fd253c015ff90825bda3dc8a3cf74e5e962c161068d8028bb6a08a6760949a67"
+    },
+    {
+      "path": "docs/04_Plan_Review_v1.0.md",
+      "bytes": 5171,
+      "sha256": "0869c418cf12c930e04f628f62a28eb2dc18c1573e5960914db27a2e09c18c4e"
+    },
+    {
+      "path": "docs/05_Figma_Brief_v1.0.md",
+      "bytes": 8755,
+      "sha256": "c16d395b26f065b2c927b68119abf61324315f122ca5645994c6a11e0681dc5e"
+    },
+    {
+      "path": "docs/06_Figma_and_Submission_Checklist.md",
+      "bytes": 7073,
+      "sha256": "22c758d9d6e41902e847dbdde8cbc4e7ebbfe8b5814f532ebc89a1b68845d534"
+    },
+    {
+      "path": "evidence/INDEX.md",
+      "bytes": 2962,
+      "sha256": "a3f3fa84400104494573f8012f72948eb783e208d018869bd38ae9282059a3ef"
+    },
+    {
+      "path": "evidence/screenshots/01_wiring_applied.png",
+      "bytes": 92547,
+      "sha256": "fadbd78c704a10c686628f626274bf941e5096abb306dc3fccd9cc6c4f21ba51"
+    },
+    {
+      "path": "evidence/screenshots/02_created_ISS009.png",
+      "bytes": 40914,
+      "sha256": "135ef354305b7a8dc0e382b9198068ea9cb85855b0d3849672d0fb01c50e2502"
+    },
+    {
+      "path": "evidence/screenshots/03_comment_saved.png",
+      "bytes": 46469,
+      "sha256": "4e91140558d6e0dee60b600abca25c7c206760466e649eafaedec92a7b1f3159"
+    },
+    {
+      "path": "evidence/screenshots/04_comment_save_error.png",
+      "bytes": 45227,
+      "sha256": "ff7cee0ce9b696bec6670d273018390a1120f9606173deb429f793f43ea0a885"
+    },
+    {
+      "path": "evidence/screenshots/05_lead_assignment_priority.png",
+      "bytes": 20787,
+      "sha256": "51437486258d927f50e4568a978bfe57c697741dcbdef5567cfbbcd2e1e5fc36"
+    },
+    {
+      "path": "evidence/screenshots/06_resolved_pending_closed.png",
+      "bytes": 20216,
+      "sha256": "cdccf32c8cb5298f5709a19d94837a68234784dd3d459b64ecca897e60d5f507"
+    },
+    {
+      "path": "evidence/screenshots/07_create_required_validation.png",
+      "bytes": 33546,
+      "sha256": "8674ddd1f87ed7e69f7b13949e7276c3d5f30fcd043040c060c1165eee8f03b8"
+    },
+    {
+      "path": "evidence/screenshots/08_comment_required_validation.png",
+      "bytes": 41483,
+      "sha256": "2884728e2bb5aea5a0c16861e085f393023b5cb187f36c152443463ae9137b82"
+    },
+    {
+      "path": "evidence/screenshots/09_plugin_missing_ID_error.png",
+      "bytes": 74200,
+      "sha256": "3b39970200f449db62d454b629968ba1fdd31559e21a3656d93ff26d293aadbe"
+    },
+    {
+      "path": "evidence/screenshots/10_old_plugin_registration_error.png",
+      "bytes": 82615,
+      "sha256": "340f39745770968ffdb722c450f4d4c2110f00e7172c3089a40930f796c20d1c"
+    },
+    {
+      "path": "figma/Mini_Issue_Tracker_FINAL.fig",
+      "bytes": 233087,
+      "sha256": "d6b8e44e4f3134d7ae1d8fd9fb7eccd0135c6cc7f97e93578fba9bc40fa20495"
+    },
+    {
+      "path": "figma/Wireframes_PRE_REVIEW.pdf",
+      "bytes": 5373574,
+      "sha256": "ee5d6b91287c652b58fd349415e0cde3c40319f7755c20bd759e900ee79aae0c"
+    },
+    {
+      "path": "sources/SD_Spec.pdf",
+      "bytes": 239807,
+      "sha256": "567294f8b160d3b018b21421e8ebc29745882723c54e0287d55bee8ce01e2026"
+    },
+    {
+      "path": "sources/UX_UI_Methodological_Guide_UA.pdf",
+      "bytes": 671730,
+      "sha256": "4e31448547e3f8fbe0d875c07a163cceb7d691293d7dc4734afa401716e4f99b"
+    },
+    {
+      "path": "submission/DL_and_GitHub.md",
+      "bytes": 1138,
+      "sha256": "3ecfc1d807ebb815a478ec48f4989a97eb775150910be30e422bfa6241e3908f"
+    },
+    {
+      "path": "submission/readme.txt",
+      "bytes": 993,
+      "sha256": "51ff72797dd02fd499b16f891e70d0399ebd3e246cfcde3c2bd1e082ca9b15a0"
+    },
+    {
+      "path": "tools/prototype-wiring/README_RU.md",
+      "bytes": 10038,
+      "sha256": "f34ba04668bb5e235d3abd80dd144f110c10a9f90ad0e9d4ba3d54826253d4bf"
+    },
+    {
+      "path": "tools/prototype-wiring/TEST_RESULTS.txt",
+      "bytes": 228,
+      "sha256": "79371338cea97e120504dbcf49c4e3686b982b605c657a46615098383146a599"
+    },
+    {
+      "path": "tools/prototype-wiring/code.js",
+      "bytes": 26822,
+      "sha256": "caf0564995ca26455937e103007a0e0eca7313788af723deb11e3532bf2a0694"
+    },
+    {
+      "path": "tools/prototype-wiring/connections.json",
+      "bytes": 17798,
+      "sha256": "0d1bc99b28911b307a863a26d34405e4fdef3a9a2f863bb53ac3d3002e3e031e"
+    },
+    {
+      "path": "tools/prototype-wiring/manifest.json",
+      "bytes": 285,
+      "sha256": "22ea59f9d32ee620041cfe4fa07d629cfa84daf4b5c89a580da67fe2a9489dba"
+    },
+    {
+      "path": "tools/prototype-wiring/test_mock.cjs",
+      "bytes": 4182,
+      "sha256": "5d1c083f97b626eb886884059caca3a223c0862dc490d2f4bac70aecdab426fa"
+    },
+    {
+      "path": "tools/prototype-wiring/ui.html",
+      "bytes": 3794,
+      "sha256": "a22d83eebc329c1ab51ab2f465665e195b5410c52083966db33ec3fc180bb4cf"
+    },
+    {
+      "path": "verification/07_Final_Review_and_Test_Report_UA.md",
+      "bytes": 21835,
+      "sha256": "d247a24a85bc87a5eff5f41366533a97e40af19f0453f9c1ffa2f9e7232e14c3"
+    },
+    {
+      "path": "verification/MIT_wiring_report.json",
+      "bytes": 16686,
+      "sha256": "ee4d944cd44f8d66f10749cd2cd67704594d977e3783209d86f9bb475d59b96e"
+    }
+  ]
+}

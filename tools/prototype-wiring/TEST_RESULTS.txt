@@ -1,0 +1,1 @@
+PASS: 11 checks — 50 writes/readback, 6 starts, idempotency, restore, missing/disabled/conflicting/wrong-file/wrong-name blocks, failure rollback, external-edit protection, nonclick preservation. Live Figma execution NOT RUN.

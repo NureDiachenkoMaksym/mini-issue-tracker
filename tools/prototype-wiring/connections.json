@@ -1,0 +1,506 @@
+{
+  "status": "planned_not_wired",
+  "mainStartingFrameNodeId": "2:4727",
+  "connections": [
+    {
+      "sourceNodeId": "I2:6368;2:6346",
+      "sourceFrameName": "S-02-A",
+      "controlName": "Important Issues",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "2:4842",
+      "destinationFrameName": "S-02-B",
+      "condition": ""
+    },
+    {
+      "sourceNodeId": "2:4853",
+      "sourceFrameName": "S-02-B",
+      "controlName": "All Issues",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "2:4727",
+      "destinationFrameName": "S-02-A",
+      "condition": ""
+    },
+    {
+      "sourceNodeId": "I2:6169;2:5830",
+      "sourceFrameName": "S-02-A",
+      "controlName": "Title",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "5:525",
+      "destinationFrameName": "S-03-003 · Member A · from All",
+      "condition": "ISS-003 title; viewer remains Member A"
+    },
+    {
+      "sourceNodeId": "2:6249",
+      "sourceFrameName": "S-02-A",
+      "controlName": "Create Issue",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "5:631",
+      "destinationFrameName": "M-01-PREFILLED · from All",
+      "condition": "Prefilled simulated modal; Navigate, not Open overlay"
+    },
+    {
+      "sourceNodeId": "5:530",
+      "sourceFrameName": "S-03-003 · Member A · from All",
+      "controlName": "Return to Issues List",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "2:4727",
+      "destinationFrameName": "S-02-A",
+      "condition": ""
+    },
+    {
+      "sourceNodeId": "5:670",
+      "sourceFrameName": "M-01-PREFILLED · from All",
+      "controlName": "Cancel",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "2:4727",
+      "destinationFrameName": "S-02-A",
+      "condition": "No creation; restore calling tab"
+    },
+    {
+      "sourceNodeId": "5:671",
+      "sourceFrameName": "M-01-PREFILLED · from All",
+      "controlName": "Create",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "5:427",
+      "destinationFrameName": "S-03-NEW",
+      "condition": "Valid prefilled Title + Description; fixture creates ISS-009"
+    },
+    {
+      "sourceNodeId": "5:432",
+      "sourceFrameName": "S-03-NEW",
+      "controlName": "Return to Issues List",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "5:1412",
+      "destinationFrameName": "S-02-A · after ISS-009 creation",
+      "condition": "Preserve new record and originating tab"
+    },
+    {
+      "sourceNodeId": "5:567",
+      "sourceFrameName": "S-03-003 · Member A · from All",
+      "controlName": "Add Comment",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "5:868",
+      "destinationFrameName": "S-03-003 · Comment validation · from All",
+      "condition": "Empty comment"
+    },
+    {
+      "sourceNodeId": "5:565",
+      "sourceFrameName": "S-03-003 · Member A · from All",
+      "controlName": "Multiline input",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "5:922",
+      "destinationFrameName": "S-03-003 · Comment draft-success · from All",
+      "condition": "Simulated prefill, not live typing"
+    },
+    {
+      "sourceNodeId": "5:908",
+      "sourceFrameName": "S-03-003 · Comment validation · from All",
+      "controlName": "Multiline input",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "5:922",
+      "destinationFrameName": "S-03-003 · Comment draft-success · from All",
+      "condition": "Simulated prefill"
+    },
+    {
+      "sourceNodeId": "5:964",
+      "sourceFrameName": "S-03-003 · Comment draft-success · from All",
+      "controlName": "Add Comment",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "5:976",
+      "destinationFrameName": "S-03-003 · Comment saved · from All",
+      "condition": "Success fixture"
+    },
+    {
+      "sourceNodeId": "5:1073",
+      "sourceFrameName": "S-03-003 · Comment draft-failure · from All",
+      "controlName": "Add Comment",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "5:1085",
+      "destinationFrameName": "S-03-003 · Comment error · from All",
+      "condition": "Independent failure fixture; no newly saved entry"
+    },
+    {
+      "sourceNodeId": "5:1128",
+      "sourceFrameName": "S-03-003 · Comment error · from All",
+      "controlName": "Add Comment",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "5:976",
+      "destinationFrameName": "S-03-003 · Comment saved · from All",
+      "condition": "Simulated successful retry"
+    },
+    {
+      "sourceNodeId": "5:873",
+      "sourceFrameName": "S-03-003 · Comment validation · from All",
+      "controlName": "Return to Issues List",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "2:4727",
+      "destinationFrameName": "S-02-A",
+      "condition": ""
+    },
+    {
+      "sourceNodeId": "5:927",
+      "sourceFrameName": "S-03-003 · Comment draft-success · from All",
+      "controlName": "Return to Issues List",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "2:4727",
+      "destinationFrameName": "S-02-A",
+      "condition": ""
+    },
+    {
+      "sourceNodeId": "5:981",
+      "sourceFrameName": "S-03-003 · Comment saved · from All",
+      "controlName": "Return to Issues List",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "2:4727",
+      "destinationFrameName": "S-02-A",
+      "condition": ""
+    },
+    {
+      "sourceNodeId": "5:1036",
+      "sourceFrameName": "S-03-003 · Comment draft-failure · from All",
+      "controlName": "Return to Issues List",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "2:4727",
+      "destinationFrameName": "S-02-A",
+      "condition": ""
+    },
+    {
+      "sourceNodeId": "5:1090",
+      "sourceFrameName": "S-03-003 · Comment error · from All",
+      "controlName": "Return to Issues List",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "2:4727",
+      "destinationFrameName": "S-02-A",
+      "condition": ""
+    },
+    {
+      "sourceNodeId": "I2:6125;2:5830",
+      "sourceFrameName": "S-02-B",
+      "controlName": "Title",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "5:578",
+      "destinationFrameName": "S-03-003 · Member A · from Important",
+      "condition": "ISS-003 title; viewer remains Member A"
+    },
+    {
+      "sourceNodeId": "2:6247",
+      "sourceFrameName": "S-02-B",
+      "controlName": "Create Issue",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "5:759",
+      "destinationFrameName": "M-01-PREFILLED · from Important",
+      "condition": "Prefilled simulated modal; Navigate, not Open overlay"
+    },
+    {
+      "sourceNodeId": "5:583",
+      "sourceFrameName": "S-03-003 · Member A · from Important",
+      "controlName": "Return to Issues List",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "2:4842",
+      "destinationFrameName": "S-02-B",
+      "condition": ""
+    },
+    {
+      "sourceNodeId": "5:798",
+      "sourceFrameName": "M-01-PREFILLED · from Important",
+      "controlName": "Cancel",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "2:4842",
+      "destinationFrameName": "S-02-B",
+      "condition": "No creation; restore calling tab"
+    },
+    {
+      "sourceNodeId": "5:799",
+      "sourceFrameName": "M-01-PREFILLED · from Important",
+      "controlName": "Create",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "5:476",
+      "destinationFrameName": "S-03-NEW · from Important",
+      "condition": "Valid prefilled Title + Description; fixture creates ISS-009"
+    },
+    {
+      "sourceNodeId": "5:481",
+      "sourceFrameName": "S-03-NEW · from Important",
+      "controlName": "Return to Issues List",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "5:1537",
+      "destinationFrameName": "S-02-B · after ISS-009 creation",
+      "condition": "Preserve new record and originating tab"
+    },
+    {
+      "sourceNodeId": "5:620",
+      "sourceFrameName": "S-03-003 · Member A · from Important",
+      "controlName": "Add Comment",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "5:1140",
+      "destinationFrameName": "S-03-003 · Comment validation · from Important",
+      "condition": "Empty comment"
+    },
+    {
+      "sourceNodeId": "5:618",
+      "sourceFrameName": "S-03-003 · Member A · from Important",
+      "controlName": "Multiline input",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "5:1194",
+      "destinationFrameName": "S-03-003 · Comment draft-success · from Important",
+      "condition": "Simulated prefill, not live typing"
+    },
+    {
+      "sourceNodeId": "5:1180",
+      "sourceFrameName": "S-03-003 · Comment validation · from Important",
+      "controlName": "Multiline input",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "5:1194",
+      "destinationFrameName": "S-03-003 · Comment draft-success · from Important",
+      "condition": "Simulated prefill"
+    },
+    {
+      "sourceNodeId": "5:1236",
+      "sourceFrameName": "S-03-003 · Comment draft-success · from Important",
+      "controlName": "Add Comment",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "5:1248",
+      "destinationFrameName": "S-03-003 · Comment saved · from Important",
+      "condition": "Success fixture"
+    },
+    {
+      "sourceNodeId": "5:1345",
+      "sourceFrameName": "S-03-003 · Comment draft-failure · from Important",
+      "controlName": "Add Comment",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "5:1357",
+      "destinationFrameName": "S-03-003 · Comment error · from Important",
+      "condition": "Independent failure fixture; no newly saved entry"
+    },
+    {
+      "sourceNodeId": "5:1400",
+      "sourceFrameName": "S-03-003 · Comment error · from Important",
+      "controlName": "Add Comment",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "5:1248",
+      "destinationFrameName": "S-03-003 · Comment saved · from Important",
+      "condition": "Simulated successful retry"
+    },
+    {
+      "sourceNodeId": "5:1145",
+      "sourceFrameName": "S-03-003 · Comment validation · from Important",
+      "controlName": "Return to Issues List",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "2:4842",
+      "destinationFrameName": "S-02-B",
+      "condition": ""
+    },
+    {
+      "sourceNodeId": "5:1199",
+      "sourceFrameName": "S-03-003 · Comment draft-success · from Important",
+      "controlName": "Return to Issues List",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "2:4842",
+      "destinationFrameName": "S-02-B",
+      "condition": ""
+    },
+    {
+      "sourceNodeId": "5:1253",
+      "sourceFrameName": "S-03-003 · Comment saved · from Important",
+      "controlName": "Return to Issues List",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "2:4842",
+      "destinationFrameName": "S-02-B",
+      "condition": ""
+    },
+    {
+      "sourceNodeId": "5:1308",
+      "sourceFrameName": "S-03-003 · Comment draft-failure · from Important",
+      "controlName": "Return to Issues List",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "2:4842",
+      "destinationFrameName": "S-02-B",
+      "condition": ""
+    },
+    {
+      "sourceNodeId": "5:1362",
+      "sourceFrameName": "S-03-003 · Comment error · from Important",
+      "controlName": "Return to Issues List",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "2:4842",
+      "destinationFrameName": "S-02-B",
+      "condition": ""
+    },
+    {
+      "sourceNodeId": "I5:1420;2:6346",
+      "sourceFrameName": "S-02-A · after ISS-009 creation",
+      "controlName": "Important Issues",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "5:1537",
+      "destinationFrameName": "S-02-B · after ISS-009 creation",
+      "condition": "ISS-009 remains excluded: Not Set priority"
+    },
+    {
+      "sourceNodeId": "5:1547",
+      "sourceFrameName": "S-02-B · after ISS-009 creation",
+      "controlName": "All Issues",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "5:1412",
+      "destinationFrameName": "S-02-A · after ISS-009 creation",
+      "condition": "Retain all nine records"
+    },
+    {
+      "sourceNodeId": "I5:1526;2:5830",
+      "sourceFrameName": "S-02-A · after ISS-009 creation",
+      "controlName": "Title",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "5:427",
+      "destinationFrameName": "S-03-NEW",
+      "condition": ""
+    },
+    {
+      "sourceNodeId": "2:6309",
+      "sourceFrameName": "M-01",
+      "controlName": "Cancel",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "2:4727",
+      "destinationFrameName": "S-02-A",
+      "condition": "Existing empty All-origin modal"
+    },
+    {
+      "sourceNodeId": "2:6319",
+      "sourceFrameName": "M-01",
+      "controlName": "Create",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "2:5190",
+      "destinationFrameName": "M-01 · Missing Title and Description",
+      "condition": "Both empty; no new issue"
+    },
+    {
+      "sourceNodeId": "2:6305",
+      "sourceFrameName": "M-01 · Missing Title and Description",
+      "controlName": "Cancel",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "2:4727",
+      "destinationFrameName": "S-02-A",
+      "condition": ""
+    },
+    {
+      "sourceNodeId": "5:1573",
+      "sourceFrameName": "O-ASSIGN-READY",
+      "controlName": "Apply Assignee",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "5:1588",
+      "destinationFrameName": "O-ASSIGN-SAVED",
+      "condition": "Lead stays Lead; current assignee becomes Member A"
+    },
+    {
+      "sourceNodeId": "5:1600",
+      "sourceFrameName": "O-ASSIGN-SAVED",
+      "controlName": "Apply Priority",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "5:1610",
+      "destinationFrameName": "O-PRIORITY-SAVED",
+      "condition": "Lead stays Lead; priority becomes High"
+    },
+    {
+      "sourceNodeId": "5:1652",
+      "sourceFrameName": "O-STATUS-OPEN",
+      "controlName": "Apply Status",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "5:1655",
+      "destinationFrameName": "O-STATUS-IN-PROGRESS",
+      "condition": "ISS-001; Member A; Open → In Progress"
+    },
+    {
+      "sourceNodeId": "5:1675",
+      "sourceFrameName": "O-STATUS-IN-PROGRESS",
+      "controlName": "Apply Status",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "5:1678",
+      "destinationFrameName": "O-STATUS-RESOLVED-CLOSE",
+      "condition": "ISS-001; Member A; In Progress → Resolved"
+    },
+    {
+      "sourceNodeId": "5:1698",
+      "sourceFrameName": "O-STATUS-RESOLVED-CLOSE",
+      "controlName": "Apply Status",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "5:1701",
+      "destinationFrameName": "O-STATUS-CLOSED",
+      "condition": "ISS-001; Member A; Resolved → Closed"
+    },
+    {
+      "sourceNodeId": "5:1696",
+      "sourceFrameName": "O-STATUS-RESOLVED-CLOSE",
+      "controlName": "Select Status",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "5:1728",
+      "destinationFrameName": "O-STATUS-RESOLVED-REOPEN",
+      "condition": "Simulate choosing In Progress; current status remains Resolved"
+    },
+    {
+      "sourceNodeId": "5:1746",
+      "sourceFrameName": "O-STATUS-RESOLVED-REOPEN",
+      "controlName": "Select Status",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "5:1678",
+      "destinationFrameName": "O-STATUS-RESOLVED-CLOSE",
+      "condition": "Simulate choosing Closed; current status remains Resolved"
+    },
+    {
+      "sourceNodeId": "5:1748",
+      "sourceFrameName": "O-STATUS-RESOLVED-REOPEN",
+      "controlName": "Apply Status",
+      "trigger": "ON_CLICK",
+      "actionType": "NAVIGATE",
+      "destinationNodeId": "5:1655",
+      "destinationFrameName": "O-STATUS-IN-PROGRESS",
+      "condition": "ISS-001; Member A; Resolved → In Progress"
+    }
+  ]
+}

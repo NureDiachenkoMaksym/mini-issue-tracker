@@ -1,0 +1,573 @@
+{
+  "phase": "applied",
+  "ok": true,
+  "pageId": "0:1",
+  "total": 50,
+  "ready": 0,
+  "alreadyWired": 50,
+  "errors": [],
+  "warnings": [
+    "50 строк — подготовленная симуляция, а не приложение/БД. Conditions — пояснения fixture, не runtime-условия.",
+    "Создание — NAVIGATE на full-screen modal fixtures, не Open overlay. Макеты не меняются; отличие от исходного overlay-контракта нужно отметить в отчёте.",
+    "Дополнительные сценарии ISS-003 status, ISS-009 comments, post-change lists и repeated creation таблицей не покрыты.",
+    "Редактирование вложенных instance nodes проверяется при записи; при ошибке выполняется откат."
+  ],
+  "plannedStarts": [
+    {
+      "nodeId": "2:4727",
+      "name": "01 · Main — All Issues"
+    },
+    {
+      "nodeId": "5:1566",
+      "name": "02 · Lead — Assignment & Priority"
+    },
+    {
+      "nodeId": "5:1632",
+      "name": "03 · Assignee — Status lifecycle"
+    },
+    {
+      "nodeId": "5:1031",
+      "name": "04 · Comment failure — All"
+    },
+    {
+      "nodeId": "5:1303",
+      "name": "05 · Comment failure — Important"
+    },
+    {
+      "nodeId": "2:4930",
+      "name": "06 · Empty Create validation"
+    }
+  ],
+  "rows": [
+    {
+      "row": 1,
+      "source": "I2:6368;2:6346",
+      "control": "Important Issues",
+      "from": "S-02-A",
+      "to": "S-02-B",
+      "destination": "2:4842",
+      "condition": "",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 2,
+      "source": "2:4853",
+      "control": "All Issues",
+      "from": "S-02-B",
+      "to": "S-02-A",
+      "destination": "2:4727",
+      "condition": "",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 3,
+      "source": "I2:6169;2:5830",
+      "control": "Title",
+      "from": "S-02-A",
+      "to": "S-03-003 · Member A · from All",
+      "destination": "5:525",
+      "condition": "ISS-003 title; viewer remains Member A",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 4,
+      "source": "2:6249",
+      "control": "Create Issue",
+      "from": "S-02-A",
+      "to": "M-01-PREFILLED · from All",
+      "destination": "5:631",
+      "condition": "Prefilled simulated modal; Navigate, not Open overlay",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 5,
+      "source": "5:530",
+      "control": "Return to Issues List",
+      "from": "S-03-003 · Member A · from All",
+      "to": "S-02-A",
+      "destination": "2:4727",
+      "condition": "",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 6,
+      "source": "5:670",
+      "control": "Cancel",
+      "from": "M-01-PREFILLED · from All",
+      "to": "S-02-A",
+      "destination": "2:4727",
+      "condition": "No creation; restore calling tab",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 7,
+      "source": "5:671",
+      "control": "Create",
+      "from": "M-01-PREFILLED · from All",
+      "to": "S-03-NEW",
+      "destination": "5:427",
+      "condition": "Valid prefilled Title + Description; fixture creates ISS-009",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 8,
+      "source": "5:432",
+      "control": "Return to Issues List",
+      "from": "S-03-NEW",
+      "to": "S-02-A · after ISS-009 creation",
+      "destination": "5:1412",
+      "condition": "Preserve new record and originating tab",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 9,
+      "source": "5:567",
+      "control": "Add Comment",
+      "from": "S-03-003 · Member A · from All",
+      "to": "S-03-003 · Comment validation · from All",
+      "destination": "5:868",
+      "condition": "Empty comment",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 10,
+      "source": "5:565",
+      "control": "Multiline input",
+      "from": "S-03-003 · Member A · from All",
+      "to": "S-03-003 · Comment draft-success · from All",
+      "destination": "5:922",
+      "condition": "Simulated prefill, not live typing",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 11,
+      "source": "5:908",
+      "control": "Multiline input",
+      "from": "S-03-003 · Comment validation · from All",
+      "to": "S-03-003 · Comment draft-success · from All",
+      "destination": "5:922",
+      "condition": "Simulated prefill",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 12,
+      "source": "5:964",
+      "control": "Add Comment",
+      "from": "S-03-003 · Comment draft-success · from All",
+      "to": "S-03-003 · Comment saved · from All",
+      "destination": "5:976",
+      "condition": "Success fixture",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 13,
+      "source": "5:1073",
+      "control": "Add Comment",
+      "from": "S-03-003 · Comment draft-failure · from All",
+      "to": "S-03-003 · Comment error · from All",
+      "destination": "5:1085",
+      "condition": "Independent failure fixture; no newly saved entry",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 14,
+      "source": "5:1128",
+      "control": "Add Comment",
+      "from": "S-03-003 · Comment error · from All",
+      "to": "S-03-003 · Comment saved · from All",
+      "destination": "5:976",
+      "condition": "Simulated successful retry",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 15,
+      "source": "5:873",
+      "control": "Return to Issues List",
+      "from": "S-03-003 · Comment validation · from All",
+      "to": "S-02-A",
+      "destination": "2:4727",
+      "condition": "",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 16,
+      "source": "5:927",
+      "control": "Return to Issues List",
+      "from": "S-03-003 · Comment draft-success · from All",
+      "to": "S-02-A",
+      "destination": "2:4727",
+      "condition": "",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 17,
+      "source": "5:981",
+      "control": "Return to Issues List",
+      "from": "S-03-003 · Comment saved · from All",
+      "to": "S-02-A",
+      "destination": "2:4727",
+      "condition": "",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 18,
+      "source": "5:1036",
+      "control": "Return to Issues List",
+      "from": "S-03-003 · Comment draft-failure · from All",
+      "to": "S-02-A",
+      "destination": "2:4727",
+      "condition": "",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 19,
+      "source": "5:1090",
+      "control": "Return to Issues List",
+      "from": "S-03-003 · Comment error · from All",
+      "to": "S-02-A",
+      "destination": "2:4727",
+      "condition": "",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 20,
+      "source": "I2:6125;2:5830",
+      "control": "Title",
+      "from": "S-02-B",
+      "to": "S-03-003 · Member A · from Important",
+      "destination": "5:578",
+      "condition": "ISS-003 title; viewer remains Member A",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 21,
+      "source": "2:6247",
+      "control": "Create Issue",
+      "from": "S-02-B",
+      "to": "M-01-PREFILLED · from Important",
+      "destination": "5:759",
+      "condition": "Prefilled simulated modal; Navigate, not Open overlay",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 22,
+      "source": "5:583",
+      "control": "Return to Issues List",
+      "from": "S-03-003 · Member A · from Important",
+      "to": "S-02-B",
+      "destination": "2:4842",
+      "condition": "",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 23,
+      "source": "5:798",
+      "control": "Cancel",
+      "from": "M-01-PREFILLED · from Important",
+      "to": "S-02-B",
+      "destination": "2:4842",
+      "condition": "No creation; restore calling tab",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 24,
+      "source": "5:799",
+      "control": "Create",
+      "from": "M-01-PREFILLED · from Important",
+      "to": "S-03-NEW · from Important",
+      "destination": "5:476",
+      "condition": "Valid prefilled Title + Description; fixture creates ISS-009",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 25,
+      "source": "5:481",
+      "control": "Return to Issues List",
+      "from": "S-03-NEW · from Important",
+      "to": "S-02-B · after ISS-009 creation",
+      "destination": "5:1537",
+      "condition": "Preserve new record and originating tab",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 26,
+      "source": "5:620",
+      "control": "Add Comment",
+      "from": "S-03-003 · Member A · from Important",
+      "to": "S-03-003 · Comment validation · from Important",
+      "destination": "5:1140",
+      "condition": "Empty comment",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 27,
+      "source": "5:618",
+      "control": "Multiline input",
+      "from": "S-03-003 · Member A · from Important",
+      "to": "S-03-003 · Comment draft-success · from Important",
+      "destination": "5:1194",
+      "condition": "Simulated prefill, not live typing",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 28,
+      "source": "5:1180",
+      "control": "Multiline input",
+      "from": "S-03-003 · Comment validation · from Important",
+      "to": "S-03-003 · Comment draft-success · from Important",
+      "destination": "5:1194",
+      "condition": "Simulated prefill",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 29,
+      "source": "5:1236",
+      "control": "Add Comment",
+      "from": "S-03-003 · Comment draft-success · from Important",
+      "to": "S-03-003 · Comment saved · from Important",
+      "destination": "5:1248",
+      "condition": "Success fixture",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 30,
+      "source": "5:1345",
+      "control": "Add Comment",
+      "from": "S-03-003 · Comment draft-failure · from Important",
+      "to": "S-03-003 · Comment error · from Important",
+      "destination": "5:1357",
+      "condition": "Independent failure fixture; no newly saved entry",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 31,
+      "source": "5:1400",
+      "control": "Add Comment",
+      "from": "S-03-003 · Comment error · from Important",
+      "to": "S-03-003 · Comment saved · from Important",
+      "destination": "5:1248",
+      "condition": "Simulated successful retry",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 32,
+      "source": "5:1145",
+      "control": "Return to Issues List",
+      "from": "S-03-003 · Comment validation · from Important",
+      "to": "S-02-B",
+      "destination": "2:4842",
+      "condition": "",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 33,
+      "source": "5:1199",
+      "control": "Return to Issues List",
+      "from": "S-03-003 · Comment draft-success · from Important",
+      "to": "S-02-B",
+      "destination": "2:4842",
+      "condition": "",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 34,
+      "source": "5:1253",
+      "control": "Return to Issues List",
+      "from": "S-03-003 · Comment saved · from Important",
+      "to": "S-02-B",
+      "destination": "2:4842",
+      "condition": "",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 35,
+      "source": "5:1308",
+      "control": "Return to Issues List",
+      "from": "S-03-003 · Comment draft-failure · from Important",
+      "to": "S-02-B",
+      "destination": "2:4842",
+      "condition": "",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 36,
+      "source": "5:1362",
+      "control": "Return to Issues List",
+      "from": "S-03-003 · Comment error · from Important",
+      "to": "S-02-B",
+      "destination": "2:4842",
+      "condition": "",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 37,
+      "source": "I5:1420;2:6346",
+      "control": "Important Issues",
+      "from": "S-02-A · after ISS-009 creation",
+      "to": "S-02-B · after ISS-009 creation",
+      "destination": "5:1537",
+      "condition": "ISS-009 remains excluded: Not Set priority",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 38,
+      "source": "5:1547",
+      "control": "All Issues",
+      "from": "S-02-B · after ISS-009 creation",
+      "to": "S-02-A · after ISS-009 creation",
+      "destination": "5:1412",
+      "condition": "Retain all nine records",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 39,
+      "source": "I5:1526;2:5830",
+      "control": "Title",
+      "from": "S-02-A · after ISS-009 creation",
+      "to": "S-03-NEW",
+      "destination": "5:427",
+      "condition": "",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 40,
+      "source": "2:6309",
+      "control": "Cancel",
+      "from": "M-01",
+      "to": "S-02-A",
+      "destination": "2:4727",
+      "condition": "Existing empty All-origin modal",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 41,
+      "source": "2:6319",
+      "control": "Create",
+      "from": "M-01",
+      "to": "M-01 · Missing Title and Description",
+      "destination": "2:5190",
+      "condition": "Both empty; no new issue",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 42,
+      "source": "2:6305",
+      "control": "Cancel",
+      "from": "M-01 · Missing Title and Description",
+      "to": "S-02-A",
+      "destination": "2:4727",
+      "condition": "",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 43,
+      "source": "5:1573",
+      "control": "Apply Assignee",
+      "from": "O-ASSIGN-READY",
+      "to": "O-ASSIGN-SAVED",
+      "destination": "5:1588",
+      "condition": "Lead stays Lead; current assignee becomes Member A",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 44,
+      "source": "5:1600",
+      "control": "Apply Priority",
+      "from": "O-ASSIGN-SAVED",
+      "to": "O-PRIORITY-SAVED",
+      "destination": "5:1610",
+      "condition": "Lead stays Lead; priority becomes High",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 45,
+      "source": "5:1652",
+      "control": "Apply Status",
+      "from": "O-STATUS-OPEN",
+      "to": "O-STATUS-IN-PROGRESS",
+      "destination": "5:1655",
+      "condition": "ISS-001; Member A; Open → In Progress",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 46,
+      "source": "5:1675",
+      "control": "Apply Status",
+      "from": "O-STATUS-IN-PROGRESS",
+      "to": "O-STATUS-RESOLVED-CLOSE",
+      "destination": "5:1678",
+      "condition": "ISS-001; Member A; In Progress → Resolved",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 47,
+      "source": "5:1698",
+      "control": "Apply Status",
+      "from": "O-STATUS-RESOLVED-CLOSE",
+      "to": "O-STATUS-CLOSED",
+      "destination": "5:1701",
+      "condition": "ISS-001; Member A; Resolved → Closed",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 48,
+      "source": "5:1696",
+      "control": "Select Status",
+      "from": "O-STATUS-RESOLVED-CLOSE",
+      "to": "O-STATUS-RESOLVED-REOPEN",
+      "destination": "5:1728",
+      "condition": "Simulate choosing In Progress; current status remains Resolved",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 49,
+      "source": "5:1746",
+      "control": "Select Status",
+      "from": "O-STATUS-RESOLVED-REOPEN",
+      "to": "O-STATUS-RESOLVED-CLOSE",
+      "destination": "5:1678",
+      "condition": "Simulate choosing Closed; current status remains Resolved",
+      "status": "ALREADY WIRED"
+    },
+    {
+      "row": 50,
+      "source": "5:1748",
+      "control": "Apply Status",
+      "from": "O-STATUS-RESOLVED-REOPEN",
+      "to": "O-STATUS-IN-PROGRESS",
+      "destination": "5:1655",
+      "condition": "ISS-001; Member A; Resolved → In Progress",
+      "status": "ALREADY WIRED"
+    }
+  ],
+  "livePrototypeTest": "NOT RUN",
+  "written": 50,
+  "readBackVerified": 50,
+  "actualFlowStarts": [
+    {
+      "nodeId": "2:4727",
+      "name": "01 · Main — All Issues"
+    },
+    {
+      "nodeId": "5:1566",
+      "name": "02 · Lead — Assignment & Priority"
+    },
+    {
+      "nodeId": "5:1632",
+      "name": "03 · Assignee — Status lifecycle"
+    },
+    {
+      "nodeId": "5:1031",
+      "name": "04 · Comment failure — All"
+    },
+    {
+      "nodeId": "5:1303",
+      "name": "05 · Comment failure — Important"
+    },
+    {
+      "nodeId": "2:4930",
+      "name": "06 · Empty Create validation"
+    }
+  ],
+  "message": "50/50 связей подтверждены чтением API. Нажмите Present и пройдите маршруты; кликабельные тесты ещё не выполнены."
+}
